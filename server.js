@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable no-console */
 const http = require('http');
 const path = require('path');
 const Koa = require('koa');
@@ -65,7 +67,7 @@ let initMessage = false;
 router.get('/init', async (ctx, next) => {
   if (!initMessage) {
     initMessage = true;
-    const responseFetch = await fetch('https://ahj-diplom-backend.herokuapp.com/messages.json');
+    const responseFetch = await fetch('https://ahj-diplom-backend.herokuapp.com/msg.json');
     /* const responseFetch = await fetch('http://localhost:7070/msg.json'); */
     const body = await responseFetch.text();
     const arrayInitMessage = JSON.parse(body);
@@ -80,7 +82,7 @@ router.get('/messagesArray', async (ctx, next) => {
   ctx.response.body = arrayMessages;
 });
 
-router.get('/messages/:numb', async (ctx, next) => {
+router.get('/msg/:numb', async (ctx, next) => {
   console.log('get number of message', ctx.params.numb);
   const messagesLength = arrayMessages.length - ctx.params.numb;
   const messagesStart = (messagesLength - 10) < 0 ? 0 : (messagesLength - 10);
