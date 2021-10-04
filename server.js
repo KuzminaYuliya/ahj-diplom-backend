@@ -93,7 +93,9 @@ router.get('/msg/:numb', async (ctx, next) => {
 router.post('/favoriteMessage', async (ctx, next) => {
   const messageObject = JSON.parse(ctx.request.body);
   const messageIndex = arrayMessages.findIndex((item) => JSON.parse(item).id === messageObject.id);
-  arrayMessages[messageIndex].favorite = messageObject.value;
+  const parsedObj = JSON.parse(arrayMessages[itemIndex]);
+  parsedObj.favorite = messageObject.value;
+  arrayMessages[itemIndex] = JSON.stringify(parsedObj);
   const obj = {
     type: 'favoriteMessage',
     id: messageObject.id,
