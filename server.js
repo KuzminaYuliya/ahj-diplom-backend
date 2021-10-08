@@ -5,7 +5,7 @@ const Router = require('koa-router');
 const koaBody = require('koa-body');
 const koaStatic = require('koa-static');
 const fs = require('fs');
-const uuid = require('uuid');
+const { v4: uuidv4 } = require('uuid');
 const WS = require('ws');
 
 const fetch = require('node-fetch');
@@ -60,9 +60,39 @@ const router = new Router();
 const server = http.createServer(app.callback())
 const wsServer = new WS.Server({ server });
 
-const arrMessges = [];
+//const arrMessges = [];
+const arrMessges = [
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '1', dateTime: getCurrentTime() },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '2', dateTime: getCurrentTime()  },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '3', dateTime: getCurrentTime()  },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '4', dateTime: getCurrentTime()  },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '5', dateTime: getCurrentTime()  },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '6', dateTime: getCurrentTime()  },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '7', dateTime: getCurrentTime()  },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '8', dateTime: getCurrentTime()  },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '9', dateTime: getCurrentTime()  },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '10', dateTime: getCurrentTime()  },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '11', dateTime: getCurrentTime()  },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '12', dateTime: getCurrentTime()  },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '13', dateTime: getCurrentTime()  },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '14', dateTime: getCurrentTime()  },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '15', dateTime: getCurrentTime()  },
+  ];
 
 let initMsg = false;
+
+function getCurrentTime() {
+  const now = new Date();
+  const year = now.getFullYear();
+  let month = now.getMonth() + 1;
+  if (month < 10) month = `${0}${month}`;
+  const day = now.getDate();
+  let hour = now.getHours();
+  if (hour < 10) hour = `${0}${hour}`;
+  let minutes = now.getMinutes();
+  if (minutes < 10) minutes = `${0}${minutes}`;
+  return `${day}.${month}.${year} ${hour}:${minutes}`;
+}
 
 router.get('/initmsg', async (ctx, next) => {
   if (!initMsg) {
