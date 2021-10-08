@@ -12,7 +12,7 @@ const fetch = require('node-fetch');
 
 const app = new Koa();
 
-const public = path.join(__dirname, '/public')
+const public = path.join(__dirname, './public')
 app.use(koaStatic(public));
 
 // CORS
@@ -63,20 +63,20 @@ const wsServer = new WS.Server({ server });
 //const arrMessges = [];
 const arrMessges = [
   { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '1', dateTime: getCurrentTime() },
-  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '2', dateTime: getCurrentTime()  },
-  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '3', dateTime: getCurrentTime()  },
-  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '4', dateTime: getCurrentTime()  },
-  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '5', dateTime: getCurrentTime()  },
-  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '6', dateTime: getCurrentTime()  },
-  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '7', dateTime: getCurrentTime()  },
-  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '8', dateTime: getCurrentTime()  },
-  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '9', dateTime: getCurrentTime()  },
-  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '10', dateTime: getCurrentTime()  },
-  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '11', dateTime: getCurrentTime()  },
-  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '12', dateTime: getCurrentTime()  },
-  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '13', dateTime: getCurrentTime()  },
-  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '14', dateTime: getCurrentTime()  },
-  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '15', dateTime: getCurrentTime()  },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '2', dateTime: getCurrentTime() },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '3', dateTime: getCurrentTime() },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '4', dateTime: getCurrentTime() },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '5', dateTime: getCurrentTime() },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '6', dateTime: getCurrentTime() },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '7', dateTime: getCurrentTime() },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '8', dateTime: getCurrentTime() },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '9', dateTime: getCurrentTime() },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '10', dateTime: getCurrentTime() },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '11', dateTime: getCurrentTime() },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '12', dateTime: getCurrentTime() },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '13', dateTime: getCurrentTime() },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '14', dateTime: getCurrentTime() },
+  { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '15', dateTime: getCurrentTime() },
   ]; 
 
 let initMsg = false;
