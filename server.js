@@ -60,8 +60,8 @@ const router = new Router();
 const server = http.createServer(app.callback())
 const wsServer = new WS.Server({ server });
 
-//const arrMessges = [];
-const arrMessges = [
+const arrMessges = [];
+/* const arrMessges = [
   { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '1', dateTime: getCurrentTime() },
   { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '2', dateTime: getCurrentTime()  },
   { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '3', dateTime: getCurrentTime()  },
@@ -77,7 +77,7 @@ const arrMessges = [
   { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '13', dateTime: getCurrentTime()  },
   { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '14', dateTime: getCurrentTime()  },
   { id: uuidv4(), type: 'textMsg', pin: false, favorit: false, name: '', msg: '15', dateTime: getCurrentTime()  },
-  ];
+  ]; */
 
 let initMsg = false;
 
@@ -97,7 +97,7 @@ function getCurrentTime() {
 router.get('/initmsg', async (ctx, next) => {
   if (!initMsg) {
     initMsg = true;
-    const resp = await fetch('https://ahj-diplom-backend.herokuapp.com');
+    const resp = await fetch('https://ahj-diplom-backend.herokuapp.com/msg');
     //const resp = await fetch('http://localhost:7070');
     const body = await resp.text();
     const arrInitMsg = JSON.parse(body);

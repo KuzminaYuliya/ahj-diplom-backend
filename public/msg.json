@@ -1,0 +1,16 @@
+[ { "id": "0001", "type": "textMsg", "pin": false, "favorit": false, "name": "", "msg": "1", "dateTime": "23:13 08.10.2021" },
+  { "id": "0002", "type": "textMsg", "pin": false, "favorit": false, "name": "", "msg": "1", "dateTime": "23:14 08.10.2021" },
+  { "id": "0003", "type": "textMsg", "pin": false, "favorit": false, "name": "", "msg": "1", "dateTime": "23:15 08.10.2021" },
+  { "id": "0004", "type": "textMsg", "pin": false, "favorit": false, "name": "", "msg": "1", "dateTime": "23:16 08.10.2021" },
+  { "id": "0005", "type": "textMsg", "pin": false, "favorit": false, "name": "", "msg": "1", "dateTime": "23:17 08.10.2021" },
+  { "id": "0006", "type": "textMsg", "pin": false, "favorit": false, "name": "", "msg": "1", "dateTime": "23:18 08.10.2021" },
+  { "id": "0007", "type": "textMsg", "pin": false, "favorit": false, "name": "", "msg": "1", "dateTime": "23:19 08.10.2021" },
+  { "id": "0008", "type": "textMsg", "pin": false, "favorit": false, "name": "", "msg": "1", "dateTime": "23:20 08.10.2021" },
+  { "id": "0009", "type": "textMsg", "pin": false, "favorit": false, "name": "", "msg": "1", "dateTime": "23:21 08.10.2021" },
+  { "id": "0010", "type": "textMsg", "pin": false, "favorit": false, "name": "", "msg": "1", "dateTime": "23:22 08.10.2021" },
+  { "id": "0011", "type": "textMsg", "pin": false, "favorit": false, "name": "", "msg": "1", "dateTime": "23:23 08.10.2021" },
+  { "id": "0012", "type": "textMsg", "pin": false, "favorit": false, "name": "", "msg": "1", "dateTime": "23:24 08.10.2021" },
+  { "id": "0013", "type": "textMsg", "pin": false, "favorit": false, "name": "", "msg": "1", "dateTime": "23:25 08.10.2021" },
+  { "id": "0014", "type": "textMsg", "pin": false, "favorit": false, "name": "", "msg": "1", "dateTime": "23:26 08.10.2021" },
+  { "id": "0015", "type": "textMsg", "pin": false, "favorit": false, "name": "", "msg": "1", "dateTime": "23:27 08.10.2021" }
+]
