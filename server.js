@@ -97,8 +97,8 @@ function getCurrentTime() {
 router.get('/initmsg', async (ctx, next) => {
   if (!initMsg) {
     initMsg = true;
-    const resp = await fetch('https://ahj-diplom-backend.herokuapp.com/msg.json');
-    //const resp = await fetch('http://localhost:7070/msg.json');
+    const resp = await fetch('https://ahj-diplom-backend.herokuapp.com');
+    //const resp = await fetch('http://localhost:7070');
     const body = await resp.text();
     const arrInitMsg = JSON.parse(body);
     arrMessges.push(...arrInitMsg);
